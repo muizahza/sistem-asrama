@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard Asrama</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Sistem Pengurusan Asrama</h1>
+</header>
+
+<main>
+
+<h2>Pendaftaran Pelajar</h2>
+
+<input type="text" id="nama" placeholder="Nama Pelajar">
+<input type="text" id="idPelajar" placeholder="ID Pelajar">
+
+<button onclick="tambahPelajar()">Daftar</button>
+
+<h3>Senarai Pelajar</h3>
+
+<table>
+<tr>
+<th>Nama</th>
+<th>ID</th>
+</tr>
+
+<tbody id="senarai"></tbody>
+
+</table>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

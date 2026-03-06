@@ -1,78 +1,57 @@
-/* Reset sikit */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/body{
+font-family: Arial;
+background:#f4f6f9;
+margin:0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
+header{
+background:#2c3e50;
+color:white;
+padding:15px;
+text-align:center;
 }
 
-/* Header */
-header {
-    background: #1e3a8a;
-    color: white;
-    padding: 20px;
-    text-align: center;
+main{
+padding:20px;
 }
 
-nav ul {
-    list-style: none;
-    margin-top: 10px;
+input{
+padding:10px;
+margin:5px;
+width:200px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+button{
+padding:10px 15px;
+background:#3498db;
+color:white;
+border:none;
+cursor:pointer;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+button:hover{
+background:#2980b9;
 }
 
-nav a:hover {
-    text-decoration: underline;
+table{
+margin-top:20px;
+border-collapse:collapse;
+width:100%;
 }
 
-/* Main content */
-main {
-    width: 80%;
-    margin: 30px auto;
+table,th,td{
+border:1px solid #ccc;
 }
 
-/* Section Card Style */
-section {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+th,td{
+padding:10px;
 }
 
-/* Form */
-form input {
-    width: 100%;
-    padding: 8px;
-    margin: 8px 0 15px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-/* Button */
-button {
-    background: #1e3a8a;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background: #162d6b;
+.login-box{
+width:300px;
+margin:100px auto;
+background:white;
+padding:30px;
+text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
