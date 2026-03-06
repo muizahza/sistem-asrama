@@ -1,35 +1,178 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-    <meta charset="UTF-8">
-    <title>Sistem Pengurusan Asrama</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistem Pengurusan Asrama</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background:#2c3e50;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+nav ul{
+    list-style:none;
+    padding:0;
+}
+
+nav ul li{
+    display:inline;
+    margin:0 10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+main{
+    padding:20px;
+}
+
+section{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:8px;
+}
+
+input{
+    padding:8px;
+    margin:5px 0;
+    width:100%;
+}
+
+button{
+    padding:10px 15px;
+    background:#3498db;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2980b9;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table, th, td{
+    border:1px solid #ccc;
+}
+
+th, td{
+    padding:10px;
+    text-align:left;
+}
+</style>
+
 </head>
 <body>
-    <header>
-        <h1>Sistem Pengurusan Asrama</h1>
-        <nav>
-            <ul>
-                <li><a href="#daftar">Daftar Pelajar</a></li>
-                <li><a href="#bilik">Agihan Bilik</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="daftar">
-            <h2>Modul Pendaftaran Pelajar</h2>
-            <form>
-                Nama: <input type="text"><br>
-                ID Pelajar: <input type="text"><br>
-                <button type="button">Hantar</button>
-            </form>
-        </section>
+<header>
+<h1>Sistem Pengurusan Asrama</h1>
+<nav>
+<ul>
+<li><a href="#daftar">Daftar Pelajar</a></li>
+<li><a href="#bilik">Agihan Bilik</a></li>
+</ul>
+</nav>
+</header>
 
-        <section id="bilik">
-            <h2>Modul Agihan Bilik</h2>
-            <p>Senarai status bilik asrama akan dipaparkan di sini.</p>
-        </section>
-    </main>
+<main>
+
+<section id="daftar">
+<h2>Modul Pendaftaran Pelajar</h2>
+
+<form id="formPelajar">
+<label>Nama Pelajar</label>
+<input type="text" id="nama" required>
+
+<label>ID Pelajar</label>
+<input type="text" id="idPelajar" required>
+
+<button type="submit">Hantar</button>
+</form>
+
+<h3>Senarai Pelajar</h3>
+
+<table>
+<thead>
+<tr>
+<th>Nama</th>
+<th>ID Pelajar</th>
+</tr>
+</thead>
+<tbody id="senaraiPelajar"></tbody>
+</table>
+
+</section>
+
+<section id="bilik">
+<h2>Modul Agihan Bilik</h2>
+
+<table>
+<tr>
+<th>No Bilik</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>A1</td>
+<td>Kosong</td>
+</tr>
+
+<tr>
+<td>A2</td>
+<td>Dihuni</td>
+</tr>
+
+<tr>
+<td>A3</td>
+<td>Kosong</td>
+</tr>
+
+</table>
+
+</section>
+
+</main>
+
+<script>
+
+document.getElementById("formPelajar").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let nama = document.getElementById("nama").value;
+let id = document.getElementById("idPelajar").value;
+
+let table = document.getElementById("senaraiPelajar");
+
+let row = table.insertRow();
+
+row.insertCell(0).innerText = nama;
+row.insertCell(1).innerText = id;
+
+document.getElementById("formPelajar").reset();
+
+});
+
+</script>
+
 </body>
 </html>
